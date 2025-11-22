@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car | VANGUARD</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="shortcut icon" href="../../../assets/VM logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" sr="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body class="before-load">
+	  <div class="loading">
+      <div class="loading-circle">
+      <p class="backp">GARAGE !</p>
+      </div>
+    </div>
+
+    <header class="header">
+      <a href="../../../index.html">
+        <div class="skull">
+          <img class="skullcen" src="../../../assets/VM-Skull-II.png"></img>
+          <div class="VMwrap">
+            <img class="VMcen" src="../../../assets/VANGUARDmarquee.png" alt="">
+          </div>
+          <img class="flameI" src="../../../assets/VM-fire-loop.gif"></img>
+          <img class="flameII" src="../../../assets/VM-fire-loop.gif"></img>
+        </div>
+      </a>
+      <div class="menu">
+        <a href="../../index.html" class="logo">INVENTORY</span></a>
+        <a href="../../../sell your car/index.html" class="logo">SELL YOUR CAR</span></a>
+        <a href="../../../index.html" class="logo ozero">VM</a>
+        <a href="../../../testimonials/index.html" class="logo">TESTIMONIALS</span></a>
+        <a href="../../../about/index.html" class="logo">ABOUT US</span></a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="car">
+        <div class="car-details">
+          <h1 class="model-name">1968 Plymouth GTX</h1>
+          <p class="car-year">1968</p>
+          <p class="car-price">$159,900 - Estimated Payment $1,336/month.</p>
+          <ul class="car-specs">
+            <li>V8, 7.2 L “440 Super Commando” / optional 426 HEMI</li>
+            <li>375–425 hp, 665 Nm</li>
+            <li>0-100 (km/h) in 5.4 s.</li>
+            <li>Top Speed: 210 km/h</li>
+          </ul>
+          <ul class="car-specs">
+            <li>• Fully restored to factory or custom spec</li>
+            <li>• Collector-grade documentation</li>
+            <li>• Assistance with shipping and registration</li>
+          </ul>
+          <p class="car-highlight">Known as “The Gentleman’s Muscle Car” — the 1968 GTX blends brute force with refined style and unmistakable Mopar spirit.</p>
+        </div>
+
+
+
+        <div class="car-order">
+          <a href="tel:248-974-9513" target="_blank" class="car-order-w"><div>
+            <h1 class="model-name">Call <i class="fa-brands fa-whatsapp fa-l wa"></i></h1>
+          </div></a>
+          <a href="mailto:Tom@vanguardmotorsales.com" target="_blank" class="car-order-t"><div>
+            <h1 class="model-name">Email <i class="fa-solid fa-envelope"></i></h1>
+          </div></a>
+        </div>
+      </div>
+
+      <div class="img-preview">
+        <img src="./assets/img1.jpeg" alt="preview" />
+        <video src="" muted autoplay loop playsinline></video>
+        <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="minimap">
+        <div class="indicator"></div>
+        <div class="items">
+          
+          <div class="item"><img src="./assets/img1.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img2.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img3.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img4.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img5.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img6.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img7.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img8.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img9.jpeg" alt="" /></div>
+          <div class="item"><img src="./assets/img10.jpeg" alt="" /></div>
+          <div class="item"> <img  src="https://img.youtube.com/vi/4T_o_wmDI1k/hqdefault.jpg" data-src="https://youtu.be/4T_o_wmDI1k" alt="" /> </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      const skull = document.querySelector('.skull');
+      const strength = 50; // distance intensity (higher = stronger)
+      const ease = 0.2; // motion smoothness
+      
+      let mouseX = 0, mouseY = 0;
+      let targetX = 0, targetY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        const rect = skull.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        // distance from center
+        mouseX = (e.clientX - centerX) / strength;
+        mouseY = (e.clientY - centerY) / strength;
+      });
+      
+      function animate() {
+        // smooth lerp motion
+        targetX += (mouseX - targetX) * ease;
+        targetY += (mouseY - targetY) * ease;
+        
+        gsap.to(skull, {
+          x: targetX,
+          y: targetY,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+        
+        requestAnimationFrame(animate);
+      }
+      
+      animate();
+      
+      // smooth marquee speed switch
+  
+      const spin = gsap.to(".VMcen", {
+        rotation: -360,
+        repeat: -1,
+        ease: "none",
+        duration: 20,
+        transformOrigin: "50% 50%",
+      });
+      
+      document.querySelector(".skullcen").addEventListener("mouseenter", () => {
+        gsap.to(spin, { timeScale: 5, duration: 1, ease: "power2.out" }); // speed up smoothly
+      });
+      
+      document.querySelector(".skullcen").addEventListener("mouseleave", () => {
+        gsap.to(spin, { timeScale: 1, duration: 1.2, ease: "power2.inOut" }); // slow down smoothly
+      });
+       
+      //HEADER HOVER EFFECT
+      
+      const header = document.querySelector('.header');
+      window.addEventListener('mousemove', (e) => {
+        // If mouse is within the top 300px of viewport
+        if (e.clientY <= 300) {
+          header.classList.add('active');
+        } else {
+          header.classList.remove('active');
+        }
+      });
+  
+    </script>
+
+    <script src="../script.js"></script>
+
+  </body>
+</html>

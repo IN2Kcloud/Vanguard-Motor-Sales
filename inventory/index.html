@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANGUARD / Classic Muscle Cars</title>
+  <link rel="shortcut icon" href="../assets/vmLOGO.svg">
+  <link rel="stylesheet" href="./css/base.css">
+</head>
+<body class="before-load">
+  <div class="loading">
+    <div class="load-skull">
+      <img class="load-skullcen" src="../assets/VM-Skull-II.png"></img>
+      <div class="load-VMwrap">
+        <img class="load-VMcen" src="../assets/VANGUARDmarquee.png" alt="">
+      </div>
+      <img class="load-flameI" src="../assets/VM-fire-loop.gif"></img>
+      <img class="load-flameII" src="../assets/VM-fire-loop.gif"></img>
+    </div>
+  </div>
+
+  <div class="cursor"></div>
+
+  <header class="header">
+    <a href="../index.html">
+      <div class="skull">
+        <img class="skullcen" src="../assets/VM-Skull-II.png"></img>
+        <div class="VMwrap">
+          <img class="VMcen" src="../assets/VANGUARDmarquee.png" alt="">
+        </div>
+        <img class="flameI" src="../assets/VM-fire-loop.gif"></img>
+        <img class="flameII" src="../assets/VM-fire-loop.gif"></img>
+      </div>
+    </a>
+    <div class="menu">
+      <a href="#" class="logo current">INVENTORY</span></a>
+      <a href="../sell your car/index.html" class="logo">SELL YOUR CAR</span></a>
+      <a href="../services/index.html" class="logo">FINANCING</span></a>
+      <a href="../index.html" class="logo ozero">VM</a>
+      <a href="../testimonials/index.html" class="logo">TESTIMONIALS</span></a>
+      <a href="../about/index.html" class="logo">ABOUT US</span></a>
+      <a href="../contact/index.html" class="logo">CONTACT</span></a>
+    </div>
+  </header>
+      <div class="mb"><span>MENU</span></div>
+      <div class="mob-menu">
+        <div class="mob-menu-inner">
+          <a href="../index.html" class="mob-logo">VANGUARD</a> <br>
+          <a href="#" class="mob-logo crnt">INVENTORY</span></a> <br>
+          <a href="../sell your car/index.html" class="mob-logo">SELL YOUR CAR</span></a> <br>
+          <a href="../services/index.html" class="mob-logo">FINANCING</span></a> <br>
+          <a href="../testimonials/index.html" class="mob-logo">TESTIMONIALS</span></a> <br>
+          <a href="../about/index.html" class="mob-logo">ABOUT US</span></a> <br>
+          <a href="../contact/index.html" class="mob-logo">CONTACT</span></a> <br>
+        </div>
+      </div>
+
+  <!-- Filter + Search -->
+  <section class="controls">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by make or model...">
+    </div>
+    <button id="filterToggle" class="filter-toggle">Filters</button>
+  </section>
+
+  <aside id="filterPanel" class="filter-panel">
+    <div class="filter-header">
+      <h3>Filter Cars</h3>
+      <button id="closeFilter" class="close-filter">✕</button>
+    </div>
+    <div class="filter-group">
+      <label for="year">Year</label>
+      <select id="year">
+        <option value="">All</option>
+        <option>1970</option>
+        <option>1969</option>
+        <option>1968</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="make">Make</label>
+      <select id="make">
+        <option value="">All</option>
+        <option>Chevrolet</option>
+        <option>Ford</option>
+        <option>Dodge</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="model">Model</label>
+      <select id="model">
+        <option value="">All</option>
+        <option>Chevelle SS</option>
+        <option>Mustang Mach 1</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="price">Price</label>
+      <select id="price">
+        <option value="">All</option>
+        <option value="low">Below $100K</option>
+        <option value="mid">$100K - $150K</option>
+        <option value="high">Above $150K</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="sort">Sort By</label>
+      <select id="sort">
+        <option value="">Default</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+      </select>
+    </div>
+    <button id="applyFilter" class="apply-filter">Apply Filters</button>
+  </aside>
+
+  <main class="cars-container">
+    <!-- Car Card -->
+    <div class="car-card magnetic" data-year="1968" data-make="Plymouth" data-model="Road Runner" data-price="149900">
+      <!--<span class="hov-bg"></span>-->
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28705/1488569/1920x1440/1968-plymouth-road-runner');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1968 Plymouth</h2>
+        <p class="car-desc">Rotisserie Restored! 440ci V8, 4-Speed, PS, A/C, Rare Code 999 Petty Blue Paint</p>
+        <div class="car-price">
+          <span class="price">$149,900</span>
+          <span class="monthly">$1,252 / month</span>
+        </div>
+        <a href="./cars/1968 Plymouth Road Runner/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="1965" data-make="Shelby" data-model="Cobra Backdraft" data-price="134900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28731/1488470/1920x1440/1965-shelby-cobra-backdraft');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1965 Shelby</h2>
+        <p class="car-desc">Backdraft RT4! Iconic 427ci V8 8-Stack EFI, TKX 5-Speed, PS, GT Body, Big & Tall</p>
+        <div class="car-price">
+          <span class="price">$134,900</span>
+          <span class="monthly">$1,127 / month</span>
+        </div>
+        <a href="./cars/1965 Shelby Cobra Backdraft/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+	  <div class="car-card magnetic" data-year="1970" data-make="Chevrolet" data-model="Chevelle" data-price="149900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28690/1488377/1920x1440/1970-chevrolet-chevelle');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1970 Chevrolet</h2>
+        <p class="car-desc">Frame Off, Rotisserie Restored! GM 454ci V8, 700R4 Automatic, 12 Bolt, PS, PB</p>
+        <div class="car-price">
+          <span class="price">$149,900</span>
+          <span class="monthly">$1,252 / month</span>
+        </div>
+        <a href="./cars/1970 Chevrolet Chevelle/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+	  <div class="car-card magnetic" data-year="1966" data-make="Chevrolet" data-model="Chevelle Restomod" data-price="149900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28727/1488244/1920x1440/1966-chevrolet-chevelle-restomod');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1966 Chevrolet</h2>
+        <p class="car-desc">Frame Off, Rotisserie Restored! Built 454ci V8, TH400 Auto, 4W Disc, PS, PB, A/C</p>
+        <div class="car-price">
+          <span class="price">$149,900</span>
+          <span class="monthly">$1,252 / month</span>
+        </div>
+        <a href="./cars/1966 Chevrolet Chevelle Restomod/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+	  <div class="car-card magnetic" data-year="1997" data-make="Ford" data-model="F-250 HD XLT SuperCab Power Stroke 4X4" data-price="99900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28648/1487985/1920x1440/1997-ford-f-250-hd-xlt-supercab-power-stroke-4x4');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1997 Ford</h2>
+        <p class="car-desc">F-250 HD! 13k Original Miles, 7.3L Power Stroke Diesel V8, 5-Speed Manual, 4X4</p>
+        <div class="car-price">
+          <span class="price">$99,900</span>
+          <span class="monthly">$835 / month</span>
+        </div>
+        <a href="./cars/1997 Ford F-250 HD XLT SuperCab Power Stroke 4X4/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="1956" data-make="Mercury" data-model="Montclair" data-price="99900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28721/1487700/1920x1440/1956-mercury-montclair');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1956 Mercury</h2>
+        <p class="car-desc">Frame Off, Nut & Bolt Restored! Mercury 312ci V8, Automatic, PS, PW, Power Top</p>
+        <div class="car-price">
+          <span class="price">$99,900</span>
+          <span class="monthly">$835 / month</span>
+        </div>
+        <a href="./cars/1956 Mercury Montclair/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="2017" data-make="Chevrolet" data-model="Corvette Z06 2LZ" data-price="119900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28710/1487370/1920x1440/2017-chevrolet-corvette-z06-2lz');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">2017 Chevrolet </h2>
+        <p class="car-desc">Z06 2LZ! 3,487 Miles, 6.2L LT4 V8 (650hp) Automatic, 1 Owner, Ceramic Brakes</p>
+        <div class="car-price">
+          <span class="price">$119,900</span>
+          <span class="monthly">$1,436 / month</span>
+        </div>
+        <a href="./cars/2017 Chevrolet Corvette Z06 2LZ/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="1953" data-make="Chevrolet" data-model="3100 5 Window Pickup" data-price="99900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28714/1486773/1920x1440/1953-chevrolet-3100-5-window-pickup');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1953 Chevrolet </h2>
+        <p class="car-desc">Frame Off, Nut & Bolt Restored! GM 235ci I6, 4-Speed Manual, 5-Window Pickup</p>
+        <div class="car-price">
+          <span class="price">$79,900</span>
+          <span class="monthly">$667 / month</span>
+        </div>
+        <a href="./cars/1953 Chevrolet 3100 5 Window Pickup/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="1970" data-make="Plymouth" data-model="GTX" data-price="159900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28709/1486655/1920x1440/1970-plymouth-gtx');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1970 Plymouth</h2>
+        <p class="car-desc">Rotisserie Restored! 440ci V8, Hemi 4-Speed Manual, Dana 60, Air Grabber, PS, PB</p>
+        <div class="car-price">
+          <span class="price">$159,900</span>
+          <span class="monthly">$1,336 / month</span>
+        </div>
+        <a href="./cars/1970 Plymouth GTX/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+
+    <div class="car-card magnetic" data-year="1968" data-make="Plymouth" data-model="GTX" data-price="159900">
+      <div class="car-img" style="background-image: url('https://cdn.dealeraccelerate.com/vanguard/1/28706/1486548/1920x1440/1968-plymouth-gtx');"></div>
+      <div class="car-info">
+        <span class="tag">NEW ARRIVAL</span>
+        <h2 class="car-title">1968 Plymouth</h2>
+        <p class="car-desc">Rotisserie Restored! # Matching, 440ci V8, 727 Automatic, Sure-Grip, PS, PB</p>
+        <div class="car-price">
+          <span class="price">$159,900</span>
+          <span class="monthly">$1,336 / month</span>
+        </div>
+        <a href="./cars/1968 Plymouth GTX/index.html" class="details-btn" target="_blank">VIEW DETAILS</a>
+      </div>
+    </div>
+    
+  </main>
+  <footer class="footer">
+    <p>© 2025 <strong>VANGUARD Motor Sales</strong>. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./js/base.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    const skull = document.querySelector('.skull');
+    const strength = 50; // distance intensity (higher = stronger)
+    const ease = 0.2; // motion smoothness
+    
+    let mouseX = 0, mouseY = 0;
+    let targetX = 0, targetY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      const rect = skull.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      // distance from center
+      mouseX = (e.clientX - centerX) / strength;
+      mouseY = (e.clientY - centerY) / strength;
+    });
+    
+    function animate() {
+      // smooth lerp motion
+      targetX += (mouseX - targetX) * ease;
+      targetY += (mouseY - targetY) * ease;
+      
+      gsap.to(skull, {
+        x: targetX,
+        y: targetY,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+    
+    // smooth marquee speed switch
+
+    const spin = gsap.to(".VMcen", {
+      rotation: -360,
+      repeat: -1,
+      ease: "none",
+      duration: 20,
+      transformOrigin: "50% 50%",
+    });
+    
+    document.querySelector(".skullcen").addEventListener("mouseenter", () => {
+      gsap.to(spin, { timeScale: 5, duration: 1, ease: "power2.out" }); // speed up smoothly
+    });
+    
+    document.querySelector(".skullcen").addEventListener("mouseleave", () => {
+      gsap.to(spin, { timeScale: 1, duration: 1.2, ease: "power2.inOut" }); // slow down smoothly
+    });
+
+    // FLOAT + DEFORMATION FOR DESKTOP MENU
+    const deskLogos = document.querySelectorAll(".menu .logo");
+    
+    deskLogos.forEach((logo) => engineIdleDesk(logo));
+    
+    function engineIdleDesk(el) {
+      gsap.to(el, {
+        x: () => gsap.utils.random(-10, 10),          // tiny sway
+        y: () => gsap.utils.random(-5, 5),          // subtle bounce
+        rotation: () => gsap.utils.random(-5, 5),   // micro tilt
+        scaleX: () => gsap.utils.random(0.985, 1.02), // gentle squish
+        scaleY: () => gsap.utils.random(0.985, 1.02), // gentle stretch
+        duration: () => gsap.utils.random(0.10, 0.20), // slightly slower than mobile
+        ease: "none",
+        yoyo: true,
+        repeat: -1
+      });
+    }
+
+     
+    // HEADER HOVER EFFECT - DESKTOP ONLY
+    const header = document.querySelector('.header');
+    
+    // Only enable if screen is wider than 768px
+    if (window.innerWidth > 768) {
+      window.addEventListener('mousemove', (e) => {
+        if (e.clientY <= 300) {
+          header.classList.add('active');
+        } else {
+          header.classList.remove('active');
+        }
+      });
+    }
+    
+    // MOBILE version
+    // Disable skull link on mobile only
+    const skullLink = document.querySelector('.header > a');
+    
+    if (window.innerWidth <= 768) {
+      skullLink.addEventListener('click', (e) => {
+        e.preventDefault(); // stop redirect
+      });
+    }
+
+    const mb = document.querySelector('.mb');
+    const mobMenu = document.querySelector('.mob-menu');
+    const mobLinks = document.querySelectorAll('.mob-menu-inner .mob-logo');
+    let menuOpen = false;
+    
+    mb.addEventListener('click', () => {
+    
+      // Toggle the strike-through line on the button
+      mb.classList.toggle("open");
+    
+      if (!menuOpen) {
+        // OPEN menu smoothly with overshoot
+        gsap.to(mobMenu, { left: '22%', duration: 0.8, ease: 'power4.out' });
+        gsap.to(mb, { right: '77%', duration: 0.8, ease: 'power4.out' });
+        
+        // Stagger link animation
+        gsap.fromTo(mobLinks, 
+          { opacity: 0, y: 20 }, 
+          { opacity: 1, y: 0, stagger: 0.08, duration: 0.5, delay: 0.2, ease: 'power2.out' }
+        );
+    
+      } else {
+        // CLOSE menu smoothly
+        gsap.to(mobMenu, { left: '100%', duration: 0.7, ease: 'power2.in' });
+        gsap.to(mb, { right: '-1%', duration: 0.7, ease: 'power2.in' });
+        
+        // Fade out links fast
+        gsap.to(mobLinks, { opacity: 0, y: 20, duration: 0.3, ease: 'power2.in' });
+      }
+    
+      menuOpen = !menuOpen;
+    });
+    
+    // FLOAT + DEFORMATION RANDOM
+    const logos = document.querySelectorAll(".mob-logo");
+    logos.forEach((logo) => engineIdle(logo));
+    
+    function engineIdle(el) {
+      gsap.to(el, {
+        x: () => gsap.utils.random(-5, 2),         // tiny side shake
+        y: () => gsap.utils.random(-3, 3),         // vertical vibration
+        rotation: () => gsap.utils.random(-3, 3),  // slight twist
+        scaleX: () => gsap.utils.random(0.97, 1.03), // subtle horizontal squish
+        scaleY: () => gsap.utils.random(0.97, 1.03), // subtle vertical stretch
+        duration: () => gsap.utils.random(0.08, 0.16),
+        ease: "none",
+        yoyo: true,
+        repeat: -1
+      });
+    }
+  </script>
+
+</body>
+</html>
