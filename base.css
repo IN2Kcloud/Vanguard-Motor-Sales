@@ -232,11 +232,19 @@ body::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%
 }
 
 /* === Responsive Scaling === */
-@media (max-width: 1200px) {
-  .morph-text { font-size: 10rem; }
+@media (max-width: 1920px) {
+  .marquee-trial-content span { font-size: 15em; }
+  .marquee-trial-content-II span { font-size: 15em; }
+  .skullcen:hover ~ .marquee-trial {transform: translateY(-15em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
+  .skullcen:hover ~ .marquee-trial-II {transform: translateY(15em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
+  .morph-text { font-size: 8rem; }
 }
-@media (max-width: 768px) {
-  .morph-text { font-size: 6rem; }
+@media (max-width: 1280px) {
+  .marquee-trial-content span { font-size: 15em; }
+  .marquee-trial-content-II span { font-size: 15em; }
+  .skullcen:hover ~ .marquee-trial {transform: translateY(-3em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
+  .skullcen:hover ~ .marquee-trial-II {transform: translateY(3em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
+  .morph-text { font-size: 4rem; }
 }
 @media (max-width: 480px) {
   .morph-text { font-size: 3.5rem; }
