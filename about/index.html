@@ -10,11 +10,11 @@
     /* FONTS */
     @font-face {
       font-family: 'LEMONMILK-Regular';
-      src: url('../../assets/LEMONMILK-Regular.otf') format('opentype');
+      src: url('../assets/LEMONMILK-Regular.otf') format('opentype');
     }
     @font-face {
       font-family: 'American';
-      src: url('../../assets/American Captain.otf') format('opentype');
+      src: url('../assets/American\ Captain.otf') format('opentype');
     }
 
     /* ROOT & GLOBAL */
@@ -65,6 +65,11 @@
 .mb {visibility: hidden !important;}
 
 /* ------------------ MOBILE HEADER ------------------ */
+@media (max-width: 1280px) {
+  .header.active {height: 100px;}
+  .skull { width: 100px; height: 100px;}
+  .logo { font-size: 1rem; }
+}    
 @media (max-width: 768px) {
   .cursor {display: none !important;}
   .header {position: sticky; height: 200px;}
