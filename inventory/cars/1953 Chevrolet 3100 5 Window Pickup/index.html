@@ -146,18 +146,30 @@
       document.querySelector(".skullcen").addEventListener("mouseleave", () => {
         gsap.to(spin, { timeScale: 1, duration: 1.2, ease: "power2.inOut" }); // slow down smoothly
       });
-       
-      //HEADER HOVER EFFECT
-      
+             
+      // HEADER HOVER EFFECT - DESKTOP ONLY
       const header = document.querySelector('.header');
-      window.addEventListener('mousemove', (e) => {
-        // If mouse is within the top 300px of viewport
-        if (e.clientY <= 300) {
-          header.classList.add('active');
-        } else {
-          header.classList.remove('active');
-        }
-      });
+      
+      // Only enable if screen is wider than 768px
+      if (window.innerWidth > 768) {
+        window.addEventListener('mousemove', (e) => {
+          if (e.clientY <= 300) {
+            header.classList.add('active');
+          } else {
+            header.classList.remove('active');
+          }
+        });
+      }
+      
+      // MOBILE version
+      // Disable skull link on mobile only
+      const skullLink = document.querySelector('.header > a');
+      
+      if (window.innerWidth <= 768) {
+        skullLink.addEventListener('click', (e) => {
+          e.preventDefault(); // stop redirect
+        });
+      }
   
     </script>
 
