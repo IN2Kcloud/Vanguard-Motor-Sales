@@ -237,17 +237,17 @@ body::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%
   .marquee-trial-content-II span { font-size: 15em; }
   .skullcen:hover ~ .marquee-trial {transform: translateY(-10em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
   .skullcen:hover ~ .marquee-trial-II {transform: translateY(10em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
-  .morph-text { font-size: 8rem; }
+  .morph-text { font-size: 5rem; }
 }
 @media (max-width: 1280px) {
   .marquee-trial-content span { font-size: 15em; }
   .marquee-trial-content-II span { font-size: 15em; }
   .skullcen:hover ~ .marquee-trial {transform: translateY(-1em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
   .skullcen:hover ~ .marquee-trial-II {transform: translateY(1em); /*animation: marqueeOpac 1s ease-in-out forwards;*/}
-  .morph-text { font-size: 4rem; }
+  .morph-text { font-size: 3rem; }
 }
 @media (max-width: 480px) {
-  .morph-text { font-size: 3.5rem; }
+  .morph-text { font-size: 3rem; }
   .skullcen { width: 75%; }
   .VMwrap { width: 80%; }
   .marquee-trial-content span { font-size: 20em; }
