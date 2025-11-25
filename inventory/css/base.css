@@ -354,6 +354,9 @@ body::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%
   border-top: 2px solid #000;
   font-size: 0.9rem;
 }
+@media (max-width: 1920px) {
+  .car-card { width: 30%; }
+}
 
 @media (max-width: 768px) {
   .search-bar input { width: 200px; font-size: .6rem;}
