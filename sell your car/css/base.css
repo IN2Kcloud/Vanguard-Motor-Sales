@@ -413,7 +413,7 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
 /* small screens */
 
 @media (max-width: 1920px) {
-  .steps-wrapper{height: 66vh;}
+  .steps-wrapper{height: 50vh;}
 }
 
 @media (max-width:880px){
