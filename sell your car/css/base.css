@@ -23,6 +23,13 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
+#grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* cursor dot */
 .cursor{
   position:fixed; width:12px; height:12px; border-radius:50%;
@@ -143,16 +150,16 @@ body{
   }
 
   .types-list li {
+    background-color: #fff;
     border-top:1px solid #000;
     border-bottom:1px solid #000;
-    width: 50%;
+    width: 100%;
     position: relative;
     margin: 0.4rem 0;
     overflow: hidden;
     cursor: pointer;
-    background: transparent;
     transition: all 0.4s ease;
-    padding: 0.4rem 0.6rem;
+    padding: 0.6rem 0.6rem;
   }
 
   .types-list li .marquee-inner {
@@ -205,6 +212,8 @@ h3:hover::before {transform: scaleX(1); transform-origin: center left;}
   margin: 0.6rem 0;
   padding: 0.2rem 0;
   color: #111;
+  text-shadow: -1px -1px 0 #fff, 1.5px -1px 0 #fff, -1px  1px 0 #fff, 1px  1px 0 #fff; 
+  letter-spacing: 3px;
   font-family: "LEMONMILK-Regular", "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -237,6 +246,7 @@ h3:hover::before {transform: scaleX(1); transform-origin: center left;}
 .steps li.active {
   color: #fff;
   border-left-color: #000;
+  text-shadow: -1px -1px 0 transparent, 1.5px -1px 0 transparent, -1px  1px 0 transparent, 1px  1px 0 transparent;
 }
 
 .steps li.active::before {
@@ -408,7 +418,7 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
 .test-item:hover .quote{color:#eee}
 
 /* footer */
-.footer{text-align:center;padding:2rem 0;border-top:2px solid #000;margin-top:3rem}
+.footer{background-color: #000;color: #fff; text-align:center;padding:2rem 0;border-top:2px solid #fff;margin-top:3rem}
 
 /* small screens */
 
