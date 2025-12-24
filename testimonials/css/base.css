@@ -14,7 +14,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 body {
 	--color-text: #000;
-	--color-bg: #fff;
+	--color-bg: #eee;
 	--color-link: #000;
 	--color-link-hover: #CE1F26;
 	--color-blocklink: #000;
@@ -31,6 +31,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+}
+
+#grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* HEADER */
@@ -140,6 +147,8 @@ main {
 	width: 100vw;
 	height: fit-content;
 	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #fff;
 }
 
 .block__title, .block a {
@@ -259,6 +268,7 @@ a.content__text-link[data-fx="6"]:hover::after {
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
+		gap: 20px;
 		margin: 0 auto;
 		padding-top: 0vh;
 		min-width: 80vw;
