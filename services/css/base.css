@@ -166,16 +166,16 @@ body{
   }
 
   .types-list li {
+    background-color: #fff;
     border-top:1px solid #000;
     border-bottom:1px solid #000;
-    width: 50%;
+    width: 100%;
     position: relative;
     margin: 0.4rem 0;
     overflow: hidden;
     cursor: pointer;
-    background: transparent;
     transition: all 0.4s ease;
-    padding: 0.4rem 0.6rem;
+    padding: 0.6rem 0.6rem;
   }
 
   .types-list li .marquee-inner {
@@ -188,6 +188,7 @@ body{
     background: #000;
     color: #fff;
   }
+
 .referral {margin: .5rem 0 1.2rem;}
 .referral strong {text-decoration: underline;}
 
