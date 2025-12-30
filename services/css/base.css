@@ -37,6 +37,8 @@ body{
   transition:transform .05s linear; z-index:9999;
 }
 
+.fade-sides { -webkit-mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); }
+
 /* HEADER */
 .header {background-color: transparent; position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100vw; height: 300px; border-bottom: 2px solid transparent; transition: height 0.3s ease; overflow: hidden;}
 .header {position: sticky; top: 0; z-index: 100;}
@@ -119,12 +121,12 @@ body{
 
 .marquee-trial { position: relative; width: 100%; margin: 0 auto; padding: 0.2em 0; white-space: nowrap; overflow: hidden; z-index: 3; background: #000; display: flex; align-items: center; transition: transform 0.5s ease-in-out;}
 .marquee-trial-content { display: inline-block; white-space: nowrap; animation: marqueeAnim 120s linear infinite; }
-.marquee-trial-content span { font-family: 'American', 'LEMONMILK-Regular', 'Roboto', sans-serif; text-transform: uppercase; font-weight: 300; color: #fff; font-size: 2em; display: inline-block; padding-right: 2rem; filter: url(#minFilter); user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */} 
+.marquee-trial-content span { font-family: 'American', 'LEMONMILK-Regular', 'Roboto', sans-serif; text-transform: uppercase; font-weight: 300; color: #fff; font-size: 5em; display: inline-block; padding-right: 2rem; filter: url(#minFilter); user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */} 
 @keyframes marqueeAnim { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
 
 .hero-left { width: 100%; text-align: center; }
 .hero-left h1{ font-family:'American'; font-size:3.6rem; margin-bottom:.3rem; letter-spacing: 2px; }
-.lead{font-size:2rem;color:#333;margin-bottom:1rem; font-weight: bolder;}
+.lead{font-size:1.5rem;color:#000;margin-bottom:1rem;text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;}
 
 /* --- Financing specific styles (keeps main base.css unchanged) --- */
     .fin-hero{max-width:1200px;margin:2rem auto 1rem;padding:0 2rem;text-align:center}
