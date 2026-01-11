@@ -174,7 +174,18 @@
     section.about h2{font-size:2rem;}
     section.about p{font-size:1rem;line-height:1.6;margin-bottom:1rem;}
     section.about strong{color:var(--accent);}
-    footer.footer{margin-top:3rem;text-align:center;padding:1.5rem 0;background:#111;color:#fff;font-weight:500;}
+    
+    /* footer */
+.footer{position: relative; background-color: #000;color: #fff; text-align:center;padding:2rem 0;border-top:2px solid #fff; margin-top:3rem; height: 22vh; width: 100vw;}
+.footer p {position: absolute; top: 85%; left: 50%; transform: translate(-50%, -50%);}
+.footer a {color: #fff; text-decoration: underline;}
+.footer-address {width: 10%; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);}
+.footer-address img{width: 100%; height: auto; max-width: 50px;}
+.marquee-trial-footer { position: absolute; top: 0%; width: 100%; margin: 0 auto; padding: 0.2em 0; white-space: nowrap; overflow: hidden; z-index: 0; background: transparent; display: flex; align-items: center; opacity: 1; transition: transform .5s ease-in-out; }
+.marquee-trial-content-footer { display: inline-block; white-space: nowrap; animation: marqueeAnimfooter 60s linear infinite; }
+.marquee-trial-content-footer span { font-family: /*'Mixbox',*/ 'American', 'Morbid', 'LEMONMILK-Regular', 'Roboto', sans-serif; text-transform: uppercase; font-weight: 300; color: #fff; font-size: 4em; display: inline-block; padding-right: 2rem; text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.6);/*filter: url(#minFilter);*/ user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */} 
+@keyframes marqueeAnimfooter { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+@media (max-width: 768px) { .footer {height: 40vh;} .footer-address {top: 40%;} .footer p {top: 75%;} }
 
     /* Loader CSS */
     .loading{display:flex;align-items:center;justify-content:center;position:fixed;top:0;right:0;bottom:0;left:0;z-index:110;background:#CE1F26;opacity:0;transition:0.5s;}
@@ -268,7 +279,24 @@
   </main>
 
   <footer class="footer">
-    <p>© 2025 <strong>VANGUARD Motor Sales</strong>. All Rights Reserved.</p>
+    <div class="marquee-trial-footer">
+      <div class="marquee-trial-content-footer">
+        <span>
+            &nbsp; Vanguard Motor Sales is the nation’s premier classic and muscle car dealership &nbsp; • &nbsp; Vanguard Motor Sales is the nation’s premier classic and muscle car dealership &nbsp; • 
+            &nbsp; Vanguard Motor Sales is the nation’s premier classic and muscle car dealership &nbsp; • &nbsp; Vanguard Motor Sales is the nation’s premier classic and muscle car dealership &nbsp; • 
+            &nbsp; impulse &nbsp; • &nbsp; independent online store &nbsp; • &nbsp;
+            you can't download the experience &nbsp;
+        </span>
+      </div>
+    </div>
+    <a target="_blank" title="Vanguard Motor Sales BBB Business Review" href="https://www.bbb.org/us/mi/plymouth/profile/classic-car-dealers/vanguard-motor-sales-0332-49004430/#sealclick"> <div class="footer-address"><img src="../assets/bbb.png" alt="bbb"></div> </a>
+    <p> <a target="_blank" title="Directions" href="https://www.google.com/maps/search/Classic+Cars+for+Sale+Michigan:+Muscle+&amp;+Old+Cars+|+Vanguard+Motor+Sales+15100+Keel+St.+Plymouth+MI+48170"> 15100 Keel St. Plymouth, MI 48170</a> 
+        • 
+        Phone: <a title="Call Us" href="tel:248-974-9513">248-974-9513</a> 
+        • 
+        Email: <a title="Email Us" href="mailto:tom@vanguardmotorsales.com">tom@vanguardmotorsales.com</a>
+        <br> • <br>
+        © 2025 <strong>VANGUARD Motor Sales</strong>. All Rights Reserved.</p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
