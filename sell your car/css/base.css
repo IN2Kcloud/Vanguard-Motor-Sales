@@ -37,7 +37,7 @@ body{
   transition:transform .05s linear; z-index:9999;
 }
 
-.fade-sides { -webkit-mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); }
+/*.fade-sides { -webkit-mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); mask-image: linear-gradient( to right, transparent 0%, black 15%, black 85%, transparent 100% ); }*/
 
 /* HEADER */
 .header {background-color: transparent; position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100vw; height: 300px; border-bottom: 2px solid transparent; transition: height 0.3s ease; overflow: hidden;}
@@ -153,8 +153,11 @@ body{
 
   .types-list li {
     background-color: #fff;
+    /*
     border-top:1px solid #000;
     border-bottom:1px solid #000;
+    */
+    border:1px solid #000;
     width: 100%;
     position: relative;
     margin: 0.4rem 0;
@@ -321,7 +324,7 @@ h3:hover::before {transform: scaleX(1); transform-origin: center left;}
 .sell-form:hover {
   background-color: #ce1f26;
   border: 2px solid #000;
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   z-index: 2;
 }
