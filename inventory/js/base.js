@@ -36,7 +36,7 @@ document.querySelector('.loading').addEventListener('transitionend', (e) => {
   }
 });
 
-
+/*
 const magnets = document.querySelectorAll(".magnetic");
 const cursor = document.querySelector(".cursor");
 
@@ -63,7 +63,7 @@ magnets.forEach(el => {
     }
   });
 });
-
+*/
 
 // === Filter Panel Toggle ===
 const filterToggle = document.getElementById('filterToggle');
