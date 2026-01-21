@@ -376,6 +376,11 @@ body::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%
 a {text-decoration:none;color:#111;outline:none;}
 a:hover,a:focus {color:#000;outline:none;}
 
+@media(max-width: 2000px) {
+  .header { height: 20vh; bottom: 0vw;}
+  .header h1 {font-size:150px; height: 100px;}
+}
+
 @media(max-width: 1300px) {
   .header { height: 20vh; bottom: 0vw;}
   .header h1 {font-size:100px; height: 100px;}
