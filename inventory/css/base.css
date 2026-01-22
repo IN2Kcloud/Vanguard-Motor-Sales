@@ -429,7 +429,7 @@ p {
 }
 }
 
-@media (max-width: 500px) and (min-height: 850px) {
+@media (max-width: 500px) and (min-height: 820px) {
   .car-details {
   height:36vh;
   width: 350px;
