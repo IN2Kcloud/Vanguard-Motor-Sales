@@ -429,7 +429,7 @@ p {
 }
 }
 
-@media (max-width: 500px) and (min-height: 900px) {
+@media (max-width: 500px) and (min-height: 820px) {
   .car-details {
   height:36vh;
   width: 350px;
@@ -449,6 +449,14 @@ p {
   left: 50%;
   touch-action: none;
 }
+  .car-details .car-highlight {
+    display: none;
+  }
+
+  .car-details .car-specs {
+    margin-top: 0.2em;
+    line-height: 1.5em;
+  }
 
 }
 @media (max-width: 500px) and (max-height: 800px) {
