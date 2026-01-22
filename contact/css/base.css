@@ -19,7 +19,7 @@ a:hover{text-decoration:none;color:#111;outline:none;}
 .frame a{pointer-events:auto;}
 .frame__title{user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */}
 .frame__demos{grid-area:demos;display:flex;gap:1rem;}
-.marquee{position:absolute;top:33%;width:100vw !important;margin:0 auto;white-space:nowrap;overflow:hidden;z-index:3;}
+.marquee{position:absolute;top:25%;width:100vw !important;margin:0 auto;white-space:nowrap;overflow:hidden;z-index:3;}
 .marquee-content{display:flex;align-items:center;}
 .marquee span{font-family:'LEMONMILK-Regular','Roboto',sans-serif;font-weight:400;letter-spacing:-10px;color:#111;background-color:transparent;mix-blend-mode:normal !important;font-size:12em;text-transform:uppercase;display:inline-block;padding-left:-10%;animation:marquee-animation 80s linear infinite;filter:url(#minFilter);display:flex;align-items:center; user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */}
 @keyframes marquee-animation{0%{transform:translateX(0%);}100%{transform:translateX(-50%);}}
