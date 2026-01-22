@@ -40,11 +40,11 @@ p {
 }
 
 /* HEADER */
-.header {background-color: transparent; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100vw; height: 300px; border-bottom: 2px solid transparent; transition: height 0.3s ease; overflow: hidden;}
+.header {background-color: transparent; position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100vw; height: 300px; border-bottom: 2px solid transparent; transition: height 0.3s ease; overflow: hidden;}
 .header {position: absolute; top: 0; z-index: 100;}
-.header.active {height: 150px; border-bottom: 2px solid #000;}
+/*.header.active {height: 150px; border-bottom: 2px solid #000;}*/
 
-.skull {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 160px; height: 160px; z-index: 10; display: flex; align-items: center; justify-content: center; cursor: pointer;}
+.skull {position: absolute; top: 33%; left: 50%; transform: translate(-50%, -50%); width: 150px; height: 150px; z-index: 10; display: flex; align-items: center; justify-content: center; cursor: pointer;}
 .skullcen {position: absolute; width: 100%; height: auto; z-index: 3;}
 .VMwrap {position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2; pointer-events: none;}
 .VMcen {width: 140%; height: auto;}
@@ -52,33 +52,36 @@ p {
 .flameI {left: -48%; transform: translateY(-50%) rotate(-90deg);}
 .flameII {right: -48%; transform: translateY(-50%) rotate(90deg);}
 .skullcen:hover ~ .flameI, .skullcen:hover ~ .flameII {opacity: 1;}
-.menu {background-color: #CE1F26; display: flex; justify-content: space-around; align-items: center; width: 100%; height: 100%; z-index: 5; overflow: hidden; opacity: 0; transition: transform .5s ease-in-out, opacity .5s ease;}
+
+.menu {background-color: #CE1F26; display: none; justify-content: space-around; align-items: center; width: 100%; height: 100%; z-index: 5; overflow: hidden; opacity: 0; transition: transform .5s ease-in-out, opacity .5s ease;}
 .menu::before {content: ''; position: absolute; top: -100%; left: -50%; width: 300%; height: 300%; background-image: url(../../assets/noiseII.png); opacity: 1; animation: grain 3s steps(10) infinite; z-index: -1;}
 @keyframes grain {0%,100% {transform: translate(0,0);} 10% {transform: translate(-5%,-10%);} 20% {transform: translate(-15%,5%);} 30% {transform: translate(7%,-25%);} 40% {transform: translate(-5%,25%);} 50% {transform: translate(-15%,10%);} 60% {transform: translate(15%,0%);} 70% {transform: translate(0%,15%);} 80% {transform: translate(3%,35%);} 90% {transform: translate(-10%,10%);}}
 .header.active .menu {opacity: 1;}
-.logo {position: relative; font-family: 'American', sans-serif; font-size: 3rem; color: #fff; -webkit-text-stroke: 2px #000; letter-spacing: 1px; text-decoration: none; transition: 0.3s;}
-.logo:hover {color: #000; -webkit-text-stroke: 2px #fff;}
+.logo {position: relative; font-family: 'LEMONMILK-Regular', 'American', sans-serif; font-size: 2rem; font-weight: bolder; color: #fff; text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px  2px 0 black, 2px  2px 0 black; letter-spacing: 0px; text-decoration: none; transition: 0.3s;}
+.logo:hover {color: #000; text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white;}
 .logo {position: relative; z-index: 1;}
 .logo::before {content: ''; position: absolute; z-index: -1; top: 33%; bottom: 33%; left: -0.25em; right: -0.25em; background-color: #000; transform-origin: center right; transform: scaleX(0); transition: transform 0.2s ease-in-out;}
 .logo:hover::before {transform: scaleX(1); transform-origin: center left;}
-.current {color: #000; -webkit-text-stroke: 2px #fff; pointer-events: none; text-decoration: line-through;}
+.current {color: #000; text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white; pointer-events: none; text-decoration: line-through;}
 .ozero {opacity: 0;}
+.mob-menu {display: none !important;}
+.mb {visibility: hidden !important;}
+
 /* ------------------ MOBILE HEADER ------------------ */
-@media (max-width: 1920px) {
+@media (max-width: 2000px) {
   .header.active {height: 150px;}
-  .skull { width: 150px; height: 150px;}
+  .skull { width: 120px; height: 120px;}
   .logo { font-size: 1.5rem; }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   .header.active {height: 100px;}
   .skull { width: 100px; height: 100px;}
   .logo { font-size: 1rem; }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .cursor {display: none !important;}
-  .header {position: absolute; height: 200px;}
   .header.active {height: 150px; border-bottom: 2px solid transparent;}
-  .skull {width: 100px; height: 100px;}
+  .skull {width: 100px; height: 100px; top: 28%;}
   .menu {display: none !important;}
   .current {-webkit-text-stroke: 0px transparent;}
 }
@@ -384,7 +387,7 @@ p {
 
 .car{
   position: absolute;
-  top: 30%;
+  top: 38%;
   left: 50%;
   max-width: 400px;
   gap: 4px;
@@ -434,7 +437,7 @@ p {
   border: 2px solid #eee;
 }
   .img-preview {
-  top: 64%;
+  top: 70%;
   left: 50%;
   width: 82%;
   height: auto;   
@@ -442,7 +445,7 @@ p {
   .minimap {
   top: auto;
   right: auto;
-  bottom: 14vh;
+  bottom: 10vh;
   left: 50%;
   touch-action: none;
 }
@@ -487,7 +490,7 @@ p {
 }
 
 /* Loader CSS */
-.loading{display:flex;align-items:center;justify-content:center;position:fixed;top:0;right:0;bottom:0;left:0;z-index:100; background:#CE1F26; opacity:0; transition:0.5s;}
+.loading{display:none;align-items:center;justify-content:center;position:fixed;top:0;right:0;bottom:0;left:0;z-index:100; background:#CE1F26; opacity:0; transition:0.5s;}
 .loading::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%; height: 300%; background-image: url(../../assets/noise.png); opacity: 1; animation: grain 3s steps(10) infinite; }
 @keyframes grain { 0%, 100% { transform: translate(0, 0); } 10% { transform: translate(-5%, -10%); } 20% { transform: translate(-15%, 5%); } 30% { transform: translate(7%, -25%); } 40% { transform: translate(-5%, 25%); } 50% { transform: translate(-15%, 10%); } 60% { transform: translate(15%, 0%); } 70% { transform: translate(0%, 15%); } 80% { transform: translate(3%, 35%); } 90% { transform: translate(-10%, 10%); } }
 .before-load .loading{opacity:1;}
