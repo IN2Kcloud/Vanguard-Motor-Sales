@@ -283,3 +283,67 @@ window.addEventListener("load", () => {
   const details = document.querySelector(".car-details");
   details.classList.add("show");
 });
+
+
+// BG points -----------------------------------------------------------------
+
+const gridCanvas = document.getElementById("grid-bg");
+const ctx = gridCanvas.getContext("2d");
+
+let mouse = { x: 0.5, y: 0.5 };
+let time = 0;
+
+function resize() {
+  gridCanvas.width = window.innerWidth;
+  gridCanvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.clientX / window.innerWidth;
+  mouse.y = e.clientY / window.innerHeight;
+});
+
+function draw() {
+  time += 0.01;
+
+  ctx.clearRect(0, 0, gridCanvas.width, gridCanvas.height);
+  ctx.fillStyle = "#eee";
+  ctx.fillRect(0, 0, gridCanvas.width, gridCanvas.height);
+
+  const spacing = 32;
+  const rows = Math.ceil(gridCanvas.height / spacing);
+  const cols = Math.ceil(gridCanvas.width / spacing);
+
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+
+      const px = x * spacing;
+      const py = y * spacing;
+
+      // wave motion
+      const wave =
+        Math.sin(x * 0.3 + time) +
+        Math.cos(y * 0.3 + time);
+
+      // mouse pull
+      const mx = (mouse.x - 0.5) * 40;
+      const my = (mouse.y - 0.5) * 40;
+
+      const dx = px + wave * 3 + mx * (y / rows);
+      const dy = py + wave * 3 + my * (x / cols);
+
+      const size = 1.2 + wave * 0.3;
+
+      ctx.beginPath();
+      ctx.arc(dx, dy, size, 0, Math.PI * 2);
+      ctx.fillStyle = "#000";
+      ctx.fill();
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+
+draw();

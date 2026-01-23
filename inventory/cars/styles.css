@@ -17,6 +17,12 @@ body { font-family: 'LEMONMILK-Regular', 'Roboto', sans-serif; overflow: hidden;
   src: url('../../assets/American\ Captain.otf') format('opentype');
 }
 
+#grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 
 img {
   width: 100%;
