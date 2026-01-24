@@ -119,10 +119,12 @@ body{
 @media (max-width:1100px){ .hero{grid-template-columns:1fr 1fr} }
 @media (max-width:880px){ .hero{grid-template-columns:1fr; } .hero-right{order:2} .hero-left{order:1} }
 
-.marquee-trial { position: relative; width: 100%; margin: 0 auto; padding: 0.2em 0; white-space: nowrap; overflow: hidden; z-index: 3; background: #000; display: flex; align-items: center; transition: transform 0.5s ease-in-out;}
-.marquee-trial-content { display: inline-block; white-space: nowrap; animation: marqueeAnim 120s linear infinite; }
-.marquee-trial-content span { font-family: 'American', 'LEMONMILK-Regular', 'Roboto', sans-serif; text-transform: uppercase; font-weight: 300; color: #fff; font-size: 5em; display: inline-block; padding-right: 2rem; filter: url(#minFilter); user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */} 
+.marquee-trial { position: relative; width: 100%; margin: 0 auto; padding: 0.2em 0; white-space: nowrap; overflow: hidden; z-index: 3; background: #ce1f26; border: 5px solid #000; display: flex; align-items: center; transition: transform 0.5s ease-in-out;}
+.marquee-trial-content { display: inline-block; white-space: nowrap; animation: marqueeAnim 60s linear infinite; }
+.marquee-trial-content span { font-family: /*'American',*/ 'LEMONMILK-Regular', 'Roboto', sans-serif; text-transform: uppercase; letter-spacing: 10px; font-weight: 300; color: #fff; text-shadow: -5px -5px 0 black, 5px -5px 0 black, -5px  5px 0 black, 5px  5px 0 black; font-size: 5em; display: inline-block; padding-right: 2rem; user-select: none; -webkit-user-select: none;/* Safari */ -moz-user-select: none;/* Firefox */ -ms-user-select: none;/* IE/Edge */} 
 @keyframes marqueeAnim { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+.marquee-trial::before {content: ''; position: absolute; top: -100%; left: -50%; width: 300%; height: 300%; background-image: url(../../assets/noiseII.png); opacity: 1; animation: grain 3s steps(10) infinite; z-index: -1;}
+@keyframes grain {0%,100% {transform: translate(0,0);} 10% {transform: translate(-5%,-10%);} 20% {transform: translate(-15%,5%);} 30% {transform: translate(7%,-25%);} 40% {transform: translate(-5%,25%);} 50% {transform: translate(-15%,10%);} 60% {transform: translate(15%,0%);} 70% {transform: translate(0%,15%);} 80% {transform: translate(3%,35%);} 90% {transform: translate(-10%,10%);}}
 
 .hero-left { width: 100%; text-align: center; }
 .hero-left h1{ font-family:'American'; font-size:3.6rem; margin-bottom:.3rem; letter-spacing: 2px; }
