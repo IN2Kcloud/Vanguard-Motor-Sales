@@ -443,14 +443,14 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
   .steps-wrapper{height: 50vh;}
 }
 
-@media (max-width:880px){
+@media (max-width:1000px){
   .hero{grid-template-columns:1fr}
   .hero-right{order:2}
   .hero-left{order:1}
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .steps-wrapper { height: 66vh; flex-direction: column; gap: 2rem; }
   .steps, .step-visual { width: 100%; }
   .steps li { font-size: 14px; }
@@ -460,6 +460,7 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
   .video-card {position: relative;}
   .test-item {position: relative;}
   .email {font-size: .6rem;}
+  .page-wrap{padding:1rem 1rem}
 }
 
 @media (max-width: 768px) and (max-height: 800px) {
