@@ -402,10 +402,11 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
 }
 
 /* ------------------ MOBILE version ------------------ */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .types-list li { width: 100%; font-size: .8rem; letter-spacing: 0px;}
   .steps-wrapper { height: 50vh; flex-direction: column; gap: 2rem; }
   .steps, .step-visual { width: 100%; }
+  .page-wrap{padding:1rem 1rem}
 }
 
 @media (max-width: 768px) and (max-height: 800px) {
