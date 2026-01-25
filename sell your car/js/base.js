@@ -119,37 +119,55 @@ tips.addEventListener('keypress', (e) => {
 
 // TYPES LIST -----------------------------------------------------------------
 
+const phrases = {
+  "MUSCLE CARS": "FEEL THE RAW THUMP OF AMERICAN BIG BLOCK POWER THE GOLDEN ERA OF ASPHALT-SHREDDING PERFORMANCE",
+  "HOT RODS": "CHOPPED AND DROPPED MASTERPIECES BUILT TO STAND OUT HAND-CRAFTED ARTISTRY WITH A REBELLIOUS SOUL",
+  "LOW MILEAGE LATE MODELS": "PRESERVED IN TIME WITH THAT NEW CAR SMELL STILL INTACT COLLECTOR GRADE MODERN CLASSICS",
+  "CLASSIC CARS": "ICONIC SILHOUETTES THAT DEFINED A GENERATION OF DRIVING TIMELESS STYLE THAT CAPTURES THE SPIRIT OF THE ROAD",
+  "PICKUPS / SUVS / 4X4S": "HEAVY DUTY STEEL READY FOR THE OPEN ROAD OR THE TRAIL RUGGED VERSATILITY MEETS VINTAGE TOUGHNESS",
+  "MODERN MUSCLE": "CUTTING EDGE PERFORMANCE MEETS UNSTOPPABLE HORSEPOWER THE NEXT EVOLUTION OF THE AMERICAN LEGEND",
+  "RESTOMODS": "VINTAGE SOUL REBORN WITH PRECISION MODERN ENGINEERING OLD SCHOOL COOL WITH NEW SCHOOL RELIABILITY",
+  "PRO TOURING": "TRACK-READY PERFORMANCE CRAFTED FOR THE STREETS ENGINEERED TO HANDLE THE TURNS AND THE STRAIGHTAWAYS",
+  "EXCITING CARS": "BOLD DESIGNS GUARANTEED TO TURN HEADS AT EVERY GREEN LIGHT THE ULTIMATE ADRENALINE RUSH"
+};
+
 document.querySelectorAll('.types-list li').forEach(li => {
-  const text = li.textContent.trim();
-  li.innerHTML = `<div class="marquee-inner">${text}</div>`;
+  const originalText = li.textContent.replace(/•/g, '').trim(); 
+  li.innerHTML = `<div class="marquee-inner"><span>• ${originalText} •</span></div>`;
 
   let tween = null;
   
   li.addEventListener('mouseenter', () => {
     const inner = li.querySelector('.marquee-inner');
-    // duplicate text until it’s wide enough
-    const parentWidth = li.offsetWidth;
-    while (inner.offsetWidth < parentWidth * 2) {
-      inner.innerHTML += " &nbsp; " + text;
+    const phrase = phrases[originalText] || "VANGUARD MOTORS: HOME OF THE WORLD'S FINEST COLLECTOR CARS";
+    
+    // Construct the repeating unit
+    const repeatUnit = ` &nbsp; &nbsp; ${phrase} &nbsp; &nbsp; • ${originalText} •`;
+    
+    // Fill the void: Repeat until the inner div is at least 3x the width of the container
+    // This ensures a perfectly seamless loop without "white space" at the end
+    while (inner.scrollWidth < li.offsetWidth * 3) {
+      inner.innerHTML += repeatUnit;
     }
 
-    // Create infinite marquee
     tween = gsap.to(inner, {
-      xPercent: -50,
+      x: "-50%", // Move by half the total width for a seamless loop
       ease: "none",
       repeat: -1,
-      duration: 30
+      duration: 40 // Slower speed to accommodate the extra length
     });
   });
 
   li.addEventListener('mouseleave', () => {
-    if (tween) tween.kill();
+    if (tween) {
+      tween.kill();
+      tween = null;
+    }
     const inner = li.querySelector('.marquee-inner');
-    inner.style.transform = "translateX(0)";
-    inner.innerHTML = text; // reset to clean state
+    gsap.set(inner, { x: 0 }); // Reset position immediately
+    inner.innerHTML = `• ${originalText} •`; 
   });
 });
-
 
 // BG points -----------------------------------------------------------------
 
