@@ -155,10 +155,6 @@ body{
 
   .types-list li {
     background-color: #fff;
-    /*
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
-    */
     border:1px solid #000;
     width: 100%;
     position: relative;
@@ -167,6 +163,7 @@ body{
     cursor: pointer;
     transition: all 0.4s ease;
     padding: 0.6rem 0.6rem;
+    font-size: 1.2rem;
   }
 
   .types-list li .marquee-inner {
@@ -454,7 +451,7 @@ input:focus,textarea:focus{border-color:var(--accent);background:#fff}
   .steps-wrapper { height: 66vh; flex-direction: column; gap: 2rem; }
   .steps, .step-visual { width: 100%; }
   .steps li { font-size: 14px; }
-  .types-list li {width: 100%;}
+  .types-list li {width: 100%;font-size: 1rem;}
   .card { position: relative; width: 90vw; }
   .sell-form {position: relative;}
   .video-card {position: relative;}
