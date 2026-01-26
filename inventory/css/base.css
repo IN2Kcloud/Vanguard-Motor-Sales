@@ -221,7 +221,11 @@ body::before { content: ''; position: fixed; top: -100%; left: -50%; width: 300%
 .car-title {
   font-size: 1.4rem;
   color: var(--text);
+  letter-spacing: 2px;
+  text-shadow:-2px -2px 0 transparent,2px -2px 0 transparent,-2px 2px 0 transparent,2px 2px 0 transparent;
+  transition: 0.3s;
 }
+.car-card:hover .car-title {text-shadow:-2px -2px 0 black,2px -2px 0 black,-2px 2px 0 black,2px 2px 0 black;}
 
 .car-desc {
   font-size: 0.9rem;
